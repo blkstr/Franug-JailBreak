@@ -23,7 +23,7 @@ if (!(Test-Path -PathType Container $OutputDir)) {
 #)
 
 $SourceFiles = @(
-  "jb_wincredits.sp"
+  "franug_jailbreak.sp"
 )
 
 $IncludeList = @(
