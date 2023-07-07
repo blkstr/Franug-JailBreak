@@ -10,20 +10,16 @@ if (!(Test-Path -PathType Container $OutputDir)) {
   New-Item -ItemType Directory -Path $OutputDir
 }
 
-#$SourceFiles = @(
-#  "anticamp.sp", "armas_jailbreak.sp", "franug_captain.sp", 
-#  "franug_jailbreak.sp", "jailbreak_escondite.sp", "jailbreak_fd.sp", 
-#  "jailbreak_ff.sp", "jailbreak_hideweapons.sp", "jailbreak_hud.sp", 
-#  "jailbreak_lr.sp", "jailbreak_menu.sp", "jailbreak_noct.sp", "jailbreak_normas.sp", 
-#  "jailbreak_noscope.sp", "jailbreak_open.sp", "jailbreak_pilla.sp", 
-#  "jailbreak_rondas.sp", "jailbreak_war.sp", "jailbreak_wartotal.sp", 
-#  "jailbreak_zombies.sp", "jb_flashbang.sp", "jb_glock.sp", "jb_hp.sp", "jb_p90.sp", 
-#  "jb_usp.sp", "jb_velocity.sp", "jb_wincredits.sp", "jb_zeus.sp", "muter.sp", 
-#  "noblock.sp", "oscuridad.sp", "shortsprint.sp"
-#)
-
 $SourceFiles = @(
-  "franug_jailbreak.sp"
+  "anticamp.sp", "armas_jailbreak.sp", "franug_captain.sp", 
+  "franug_jailbreak.sp", "jailbreak_escondite.sp", "jailbreak_fd.sp", 
+  "jailbreak_ff.sp", "jailbreak_hideweapons.sp", "jailbreak_hud.sp", 
+  "jailbreak_lr.sp", "jailbreak_menu.sp", "jailbreak_noct.sp", "jailbreak_normas.sp", 
+  "jailbreak_noscope.sp", "jailbreak_open.sp", "jailbreak_pilla.sp", 
+  "jailbreak_rondas.sp", "jailbreak_war.sp", "jailbreak_wartotal.sp", 
+  "jailbreak_zombies.sp", "jb_flashbang.sp", "jb_glock.sp", "jb_hp.sp", "jb_p90.sp", 
+  "jb_usp.sp", "jb_velocity.sp", "jb_wincredits.sp", "jb_zeus.sp", "muter.sp", 
+  "noblock.sp", "oscuridad.sp", "shortsprint.sp"
 )
 
 $IncludeList = @(

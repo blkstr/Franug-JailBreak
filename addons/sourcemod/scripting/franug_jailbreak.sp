@@ -24,7 +24,7 @@ Menu menus[MAXPLAYERS + 1];
 
 char g_sRondaActual[128] = "none";
 
-Handle c_GameCredits     = INVALID_HANDLE;
+Handle c_GameCredits = INVALID_HANDLE;
 
 enum struct Premio
 {
@@ -374,19 +374,26 @@ any Native_AgregarPremio(Handle plugin, int argc)
   premio.team   = GetNativeCell(3);
 
   PushArrayArray(g_ArrayPremios, premio);
-  // SortADTArrayCustom(g_ArrayPremios, ComparePrice);
+  SortADTArrayCustom(g_ArrayPremios, PriceComparator);
 
   RenewMenus();
 }
 
-/*ComparePrice(index1, index2, Handle:array, Handle:hndl)
+stock int PriceComparator(int index1, int index2, Handle array, Handle hndl)
 {
-  new Item1[Premios];
-  new Item2[Premios];
-  GetArrayArray(array, index1, Item1, sizeof(Item1));
-  GetArrayArray(array, index2, Item2, sizeof(Item2));
+  Premio premio1;
+  Premio premio2;
+  GetArrayArray(array, index1, premio1, sizeof(premio1));
+  GetArrayArray(array, index2, premio2, sizeof(premio2));
 
-}*/
+  if (premio1.precio == premio2.precio)
+    return 0;
+  else if (premio1.precio > premio2.precio)
+    return 1;
+  else
+    return -1;
+}
+
 any Native_BorrarPremio(Handle plugin, int argc)
 {
   char buscado[AWARD_NAME_MAX_LENGTH];
