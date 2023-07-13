@@ -71,7 +71,8 @@ public void OnPluginStart()
   LoadTranslations("franug_jailbreak.phrases");
   g_ArrayPremios = CreateArray(sizeof(Premio));
 
-  RegConsoleCmd("sm_awards", DOMenu);
+  RegConsoleCmd("sm_mercadonegro", DOMenu);
+  RegConsoleCmd("sm_mn", DOMenu);
   RegConsoleCmd("sm_tienda", DOMenu);
   RegConsoleCmd("sm_premios", DOMenu);
   // RegConsoleCmd("buyammo2", DOMenu);

@@ -62,7 +62,7 @@ public DIDMenuHandler(Handle:menu, MenuAction:action, client, itemNum)
 		}
 		else if ( strcmp(info,"tienda") == 0 ) 
 		{
-			FakeClientCommand(client, "sm_awards");
+			FakeClientCommand(client, "sm_mercadonegro");
 		}
 		else if ( strcmp(info,"hats") == 0 ) 
 		{
